@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================ Variantes =================== */
+:root {
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+}
+
+/* ================= Corpo ====================== */
+body {
+  background-color: var(--background);
+  width: 1440px;
+  height: 900px;
+  grid-template-areas: 'header aside' 'main aside';
+  font-family: 'Poppins', sem serifa;
+  font-family: 'Roboto', sem serifa;
+}
+
+/* ================== Cabeçalho =================== */
+#logo {
+  position: absolute;
+  width: 115px;
+  height: 28px;
+  margin: 40px;
+}
+
+/* ================== Login ======================== */
+#main {
+  width: 572px;
+  height: 512px;
+  position: absolute;
+  left: 74px;
+  top: 194px;
+  border-radius: 4px;
+  background-color: var(--form-background);
+}
+
+.login {
+  width: 334px;
+  height: 64px;
+  position: absolute;
+  left: 119px;
+  top: 55px;
+}
+
+.login img {
+  position: relative;
+  top: 28px;
+}
+
+.login h1 {
+  position: relative;
+  bottom: 3px;
+  left: 35px;
+  color: var(--text-title);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.login p {
+  color: var(--text-base);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* ================== Email ==================== */
+.mail {
+  width: 335px;
+  height: 73px;
+  position: relative;
+  top: 170px;
+  left: 119px;
+}
+
+.mail label {
+  position: relative;
+  bottom: 5px;
+  color: var(--text-base);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.mail input {
+  border: 2px solid var(--text-base);
+  width: 335px;
+  height: 44px;
+  padding-left: 37px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--form-background);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text-base);
+}
+
+.mail input:focus-within {
+  border: 2px solid var(--primary-color);
+}
+
+.mail input {
+  background: url(assets/mail.svg) no-repeat padding-box 9px;
+  padding-left: 35px;
+  display: block;
+}
+
+.mail input:focus {
+  background: url(assets/mail-focus.svg) no-repeat padding-box 9px;
+  padding-left: 35px;
+  outline: 2px solid var(--primary-color);
+}
+
+/* ==================== Senha ======================= */
+
+.senha {
+  width: 335px;
+  height: 73px;
+  position: relative;
+  top: 190px;
+  left: 119px;
+}
+
+.senha label {
+  position: relative;
+  bottom: 6px;
+  color: var(--text-base);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.senha input {
+  border: 2px solid var(--text-base);
+  width: 335px;
+  height: 44px;
+  padding-left: 37px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--form-background);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text-base);
+}
+
+.senha input:focus-within {
+  border: 2px solid var(--primary-color);
+}
+
+.senha input {
+  background: url(assets/lock.svg) no-repeat padding-box 9px;
+  padding-left: 35px;
+  display: block;
+}
+
+.senha input:focus {
+  background: url(assets/lock-focus.svg) no-repeat padding-box 9px;
+  padding-left: 35px;
+  outline: 2px solid var(--primary-color);
+}
+
+.senha img {
+  position: relative;
+  left: 300px;
+  bottom: 32px;
+}
+
+/* ==================== Check ======================== */
+.chk {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text-base);
+}
+
+.container-chk {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  position: relative;
+  top: 200px;
+  left: 120px;
+}
+
+.chk input {
+  display: none;
+  position: relative;
+  opacity: 0;
+}
+
+.checkmark {
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-color: #24221f;
+  border: 1px solid #afb6c2;
+  border-radius: 3px;
+}
+
+.chk input:checked + .checkmark {
+  background: #ffc632 url(assets/check.svg) no-repeat;
+}
+
+.container-chk a {
+  padding: 2px;
+  position: relative;
+  left: 35px;
+  color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* ==================== Button ========================= */
+.button {
+  position: relative;
+  top: 220px;
+  left: 120px;
+  width: 334px;
+  height: 51px;
+  background-color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  border-radius: 4px;
+  border: 1px solid var(--primary-color);
+}
+
+/* ==================== Fim =========================== */
+.fim {
+  position: relative;
+  top: 240px;
+  text-align: center;
+}
+
+.fim strong {
+  color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.fim a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+/* ==================== Imagem ======================== */
+#img {
+  padding-left: 50%;
+  padding-bottom: 20%;
+  height: 600px;
+}
